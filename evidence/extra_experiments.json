@@ -1,0 +1,235 @@
+{
+  "alpha_used": 0.05,
+  "optimal_benchmark": {
+    "nominal": {
+      "exact_expected_return": {
+        "optimal": 18.73907893248353,
+        "greedy": 17.406578932196865,
+        "random": 14.922820161985285,
+        "learned": 18.342144966651965,
+        "learned_mean_of_seeds": 18.364069122741732
+      },
+      "learned_return_by_seed": {
+        "11": 18.342144966651965,
+        "22": 18.166743977329936,
+        "33": 18.324118136554027,
+        "44": 18.550721025232747,
+        "55": 18.502967461267552,
+        "66": 18.677196695150258,
+        "77": 17.997961369842603,
+        "88": 18.277014646727203,
+        "99": 18.494968056362147,
+        "110": 18.306854892298873
+      },
+      "learned_pct_of_optimal": 97.88178507992998,
+      "greedy_pct_of_optimal": 92.88919159213944,
+      "learned_gap_closed_pct": 89.59887183489546,
+      "greedy_gap_closed_pct": 65.08360463950679,
+      "optimal_simulated_test": {
+        "mean": 17.662,
+        "ci95_halfwidth": 0.9193221421140483
+      },
+      "optimal_minus_learned_test": {
+        "diff": 0.4336,
+        "ci95": 0.14417507201075577,
+        "low": 0.28942492798924424,
+        "high": 0.5777750720107557,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 1,
+        "seeds_b": 1
+      },
+      "optimal_minus_greedy_test": {
+        "diff": 1.4502000000000008,
+        "ci95": 0.37848355224939256,
+        "low": 1.0717164477506083,
+        "high": 1.8286835522493934,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 1,
+        "seeds_b": 1
+      },
+      "states_solved": 2177
+    },
+    "stress": {
+      "exact_expected_return": {
+        "optimal": 7.42909857866707,
+        "greedy": 5.942550955961306,
+        "random": 4.605755953970064,
+        "learned": 6.463973327100603,
+        "learned_mean_of_seeds": 6.451620411034865
+      },
+      "learned_return_by_seed": {
+        "11": 6.463973327100603,
+        "22": 6.643292665420655,
+        "33": 6.463927707943796,
+        "44": 6.267477185161568,
+        "55": 6.501609166404719,
+        "66": 6.323671403416531,
+        "77": 6.590612144587207,
+        "88": 6.784488402577482,
+        "99": 6.363601052444115,
+        "110": 6.113551055291973
+      },
+      "learned_pct_of_optimal": 87.00885119040068,
+      "greedy_pct_of_optimal": 79.99020194758972,
+      "learned_gap_closed_pct": 65.8162192882969,
+      "greedy_gap_closed_pct": 47.34795523213212,
+      "optimal_simulated_test": {
+        "mean": 6.8948,
+        "ci95_halfwidth": 0.8158626717656797
+      },
+      "optimal_minus_learned_test": {
+        "diff": 1.1434000000000004,
+        "ci95": 0.4945552217645236,
+        "low": 0.6488447782354768,
+        "high": 1.637955221764524,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 1,
+        "seeds_b": 1
+      },
+      "optimal_minus_greedy_test": {
+        "diff": 1.4562000000000006,
+        "ci95": 0.5908657296126196,
+        "low": 0.865334270387381,
+        "high": 2.04706572961262,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 1,
+        "seeds_b": 1
+      },
+      "states_solved": 2177
+    },
+    "note": "Optimal = best possible policy when the true probabilities of that condition are known. It maximises total (undiscounted) reward, the measure reported for all tests; the Q-table was trained with gamma = 0.95."
+  },
+  "mixed_training": {
+    "mix": {
+      "nominal": 0.7,
+      "stress": 0.3
+    },
+    "nominal": {
+      "baseline": {
+        "return": 17.22442,
+        "detections": 1.7944,
+        "hazards": 0.4194,
+        "fallback_pct": 0.017027073046143367
+      },
+      "mixed": {
+        "return": 17.1464,
+        "detections": 1.7964,
+        "hazards": 0.4186,
+        "fallback_pct": 0.00851861316977596
+      },
+      "mixed_minus_baseline_return": {
+        "diff": -0.07802000000000031,
+        "ci95": 0.050763157521038146,
+        "low": -0.12878315752103847,
+        "high": -0.027256842478962165,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "mixed_minus_baseline_hazards": {
+        "diff": -0.000800000000000002,
+        "ci95": 0.0027737465803826357,
+        "low": -0.003573746580382638,
+        "high": 0.0019737465803826336,
+        "significant": false,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "situations_learned_baseline": 556.3,
+      "situations_learned_mixed": 1104.7
+    },
+    "stress": {
+      "baseline": {
+        "return": 5.79228,
+        "detections": 0.9852,
+        "hazards": 0.759,
+        "fallback_pct": 12.882081900188203
+      },
+      "mixed": {
+        "return": 5.934139999999999,
+        "detections": 1.004,
+        "hazards": 0.7356,
+        "fallback_pct": 0.3991624132966889
+      },
+      "mixed_minus_baseline_return": {
+        "diff": 0.14186,
+        "ci95": 0.1475597206522132,
+        "low": -0.005699720652213192,
+        "high": 0.2894197206522132,
+        "significant": false,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "mixed_minus_baseline_hazards": {
+        "diff": -0.023399999999999997,
+        "ci95": 0.01332761876149312,
+        "low": -0.036727618761493115,
+        "high": -0.010072381238506877,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "situations_learned_baseline": 556.3,
+      "situations_learned_mixed": 1104.7
+    }
+  },
+  "weather_aware_filter": {
+    "filter_multiplier": 2,
+    "sectors_blocked_when_aware": [
+      3,
+      4,
+      5
+    ],
+    "baseline": {
+      "return": 5.79228,
+      "detections": 0.9852,
+      "hazards": 0.759,
+      "fallback_pct": 12.882081900188203
+    },
+    "aware": {
+      "return": 3.17724,
+      "detections": 0.548,
+      "hazards": 0.31,
+      "fallback_pct": 10.688836104513063
+    },
+    "aware_minus_baseline_return": {
+      "diff": -2.6150399999999996,
+      "ci95": 0.5637909458562151,
+      "low": -3.1788309458562147,
+      "high": -2.0512490541437844,
+      "significant": true,
+      "missions": 500,
+      "seeds_a": 10,
+      "seeds_b": 10
+    },
+    "aware_minus_baseline_detections": {
+      "diff": -0.4372,
+      "ci95": 0.049821201759909436,
+      "low": -0.48702120175990943,
+      "high": -0.3873787982400905,
+      "significant": true,
+      "missions": 500,
+      "seeds_a": 10,
+      "seeds_b": 10
+    },
+    "aware_minus_baseline_hazards": {
+      "diff": -0.449,
+      "ci95": 0.049146212317637876,
+      "low": -0.4981462123176379,
+      "high": -0.3998537876823621,
+      "significant": true,
+      "missions": 500,
+      "seeds_a": 10,
+      "seeds_b": 10
+    }
+  },
+  "elapsed_seconds": 22.2
+}

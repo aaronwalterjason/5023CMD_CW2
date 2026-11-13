@@ -1,0 +1,81 @@
+{
+  "summary": "A->2 proceeds automatically (hazard 0.08, energy 3)",
+  "state": [
+    0,
+    4,
+    4,
+    1,
+    0
+  ],
+  "situation": "surveyed: none | energy A=4, B=4 | windy | commands sent: 0",
+  "decision_source": "Q-table",
+  "times_seen_in_training": 5989,
+  "recommended": {
+    "move": "A->2",
+    "sector_name": "Sector 2",
+    "predicted_value": 16.43,
+    "expected_step_reward": 4.42,
+    "hazard_estimate": 0.08,
+    "energy_cost": 3
+  },
+  "alternatives": [
+    {
+      "move": "B->1",
+      "sector_name": "Sector 1",
+      "predicted_value": 14.89,
+      "expected_step_reward": 3.38,
+      "hazard_estimate": 0.04,
+      "energy_cost": 3
+    },
+    {
+      "move": "A->3",
+      "sector_name": "Sector 3",
+      "predicted_value": 14.78,
+      "expected_step_reward": 5.88,
+      "hazard_estimate": 0.12,
+      "energy_cost": 3
+    },
+    {
+      "move": "A->1",
+      "sector_name": "Sector 1",
+      "predicted_value": 14.24,
+      "expected_step_reward": 4.18,
+      "hazard_estimate": 0.04,
+      "energy_cost": 1
+    }
+  ],
+  "blocked": [
+    {
+      "move": "A->5",
+      "reason": "hazard 0.30 above safety limit 0.20"
+    },
+    {
+      "move": "B->5",
+      "reason": "hazard 0.30 above safety limit 0.20"
+    }
+  ],
+  "plan": [
+    {
+      "move": "A->2",
+      "energy_cost": 3,
+      "expected_reward": 4.42
+    },
+    {
+      "move": "B->3",
+      "energy_cost": 1,
+      "expected_reward": 6.68
+    },
+    {
+      "move": "A->1",
+      "energy_cost": 1,
+      "expected_reward": 4.18
+    },
+    {
+      "move": "B->4",
+      "energy_cost": 1,
+      "expected_reward": 2.5
+    }
+  ],
+  "risk_flags": [],
+  "needs_approval": false
+}

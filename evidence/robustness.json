@@ -1,0 +1,397 @@
+{
+  "alpha_used": 0.05,
+  "hyperparameter_sweep": {
+    "gamma=0.9": {
+      "parameter": "gamma",
+      "value": 0.9,
+      "is_default": false,
+      "standard_return": 18.036550000000002,
+      "detections": 1.8935,
+      "hazards": 0.4545,
+      "seed_spread": 0.7940000000000005,
+      "diff_vs_used": {
+        "diff": 0.17560000000000017,
+        "ci95": 0.13289420865708543,
+        "low": 0.042705791342914745,
+        "high": 0.3084942086570856,
+        "significant": true,
+        "missions": 200,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    },
+    "gamma=0.95": {
+      "parameter": "gamma",
+      "value": 0.95,
+      "is_default": true,
+      "standard_return": 17.860950000000003,
+      "detections": 1.8755,
+      "hazards": 0.438,
+      "seed_spread": 1.145500000000002,
+      "diff_vs_used": {
+        "diff": 0.0,
+        "ci95": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "significant": false,
+        "missions": 200,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    },
+    "gamma=0.99": {
+      "parameter": "gamma",
+      "value": 0.99,
+      "is_default": false,
+      "standard_return": 17.8789,
+      "detections": 1.881,
+      "hazards": 0.4425,
+      "seed_spread": 1.365000000000002,
+      "diff_vs_used": {
+        "diff": 0.01795000000000004,
+        "ci95": 0.084126543892618,
+        "low": -0.06617654389261797,
+        "high": 0.10207654389261804,
+        "significant": false,
+        "missions": 200,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    },
+    "episodes=3000": {
+      "parameter": "episodes",
+      "value": 3000,
+      "is_default": false,
+      "standard_return": 17.62725,
+      "detections": 1.8575,
+      "hazards": 0.426,
+      "seed_spread": 1.2505000000000024,
+      "diff_vs_used": {
+        "diff": -0.23370000000000013,
+        "ci95": 0.09804384986813211,
+        "low": -0.3317438498681322,
+        "high": -0.13565615013186802,
+        "significant": true,
+        "missions": 200,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    },
+    "episodes=6000": {
+      "parameter": "episodes",
+      "value": 6000,
+      "is_default": false,
+      "standard_return": 17.706300000000002,
+      "detections": 1.85,
+      "hazards": 0.419,
+      "seed_spread": 1.1265,
+      "diff_vs_used": {
+        "diff": -0.15465000000000007,
+        "ci95": 0.13939596527408343,
+        "low": -0.2940459652740835,
+        "high": -0.015254034725916632,
+        "significant": true,
+        "missions": 200,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    },
+    "episodes=12000": {
+      "parameter": "episodes",
+      "value": 12000,
+      "is_default": true,
+      "standard_return": 17.860950000000003,
+      "detections": 1.8755,
+      "hazards": 0.438,
+      "seed_spread": 1.145500000000002,
+      "diff_vs_used": {
+        "diff": 0.0,
+        "ci95": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "significant": false,
+        "missions": 200,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    },
+    "hazard_penalty=-6": {
+      "parameter": "hazard_penalty",
+      "value": -6,
+      "is_default": true,
+      "standard_return": 17.860950000000003,
+      "detections": 1.8755,
+      "hazards": 0.438,
+      "seed_spread": 1.145500000000002,
+      "diff_vs_used": {
+        "diff": 0.0,
+        "ci95": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "significant": false,
+        "missions": 200,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    },
+    "hazard_penalty=-10": {
+      "parameter": "hazard_penalty",
+      "value": -10,
+      "is_default": false,
+      "standard_return": 17.72735,
+      "detections": 1.8545,
+      "hazards": 0.42000000000000004,
+      "seed_spread": 0.843,
+      "diff_vs_used": {
+        "diff": -0.13360000000000002,
+        "ci95": 0.13331736685762005,
+        "low": -0.2669173668576201,
+        "high": -0.0002826331423799733,
+        "significant": true,
+        "missions": 200,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    }
+  },
+  "shifted_map": {
+    "original_presence": [
+      0.15,
+      0.45,
+      0.6,
+      0.8,
+      0.35,
+      0.9
+    ],
+    "shifted_presence": [
+      0.9,
+      0.35,
+      0.8,
+      0.6,
+      0.45,
+      0.15
+    ],
+    "results": {
+      "learned_original_map": {
+        "description": "Q-table trained on the original map (not updated)",
+        "standard_return": 21.344160000000002,
+        "detections": 2.2064,
+        "hazards": 0.4194,
+        "coverage_pct": 74.61,
+        "api_failures": 0.222,
+        "repeated_retries": 0.1062,
+        "hit_attempt_cap_pct": 0,
+        "stopped_by_guard_pct": 0,
+        "fallback_pct": 0.02977612689127607
+      },
+      "greedy_updated_map": {
+        "description": "greedy rule given the new survivor chances",
+        "standard_return": 21.9418,
+        "detections": 2.212,
+        "hazards": 0.428,
+        "coverage_pct": 75.06666666666666,
+        "api_failures": 0.222,
+        "repeated_retries": 0.222,
+        "hit_attempt_cap_pct": 0,
+        "stopped_by_guard_pct": 0,
+        "fallback_pct": 0.0
+      },
+      "learned_retrained": {
+        "description": "Q-table retrained on the new map",
+        "standard_return": 23.10126,
+        "detections": 2.3609999999999998,
+        "hazards": 0.3856,
+        "coverage_pct": 74.69333333333333,
+        "api_failures": 0.2202,
+        "repeated_retries": 0.099,
+        "hit_attempt_cap_pct": 0,
+        "stopped_by_guard_pct": 0,
+        "fallback_pct": 0.07213118566951805
+      },
+      "learned_on_training_map": {
+        "description": "same Q-table on the map it was trained on",
+        "standard_return": 17.224420000000002,
+        "detections": 1.7944,
+        "hazards": 0.4194,
+        "coverage_pct": 74.61,
+        "api_failures": 0.2218,
+        "repeated_retries": 0.1062,
+        "hit_attempt_cap_pct": 0,
+        "stopped_by_guard_pct": 0,
+        "fallback_pct": 0.017092926095691848
+      }
+    },
+    "comparisons": {
+      "old_table_minus_retrained": {
+        "diff": -1.7571000000000003,
+        "ci95": 0.28101667206470976,
+        "low": -2.03811667206471,
+        "high": -1.4760833279352905,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "old_table_minus_greedy": {
+        "diff": -0.5976399999999993,
+        "ci95": 0.3896680010289027,
+        "low": -0.9873080010289019,
+        "high": -0.20797199897109658,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 1
+      }
+    }
+  },
+  "forgetting": {
+    "states_before": 556.3,
+    "states_after": 1100.4,
+    "best_move_changed_pct": 11.655200747119698,
+    "nominal_return_before": 17.224420000000002,
+    "nominal_detections_before": 1.7944,
+    "nominal_hazards_before": 0.4194,
+    "nominal_return_after": 16.58336,
+    "nominal_detections_after": 1.7258,
+    "nominal_hazards_after": 0.39,
+    "stress_return_before": 5.79228,
+    "stress_detections_before": 0.9852,
+    "stress_hazards_before": 0.759,
+    "stress_return_after": 6.0318000000000005,
+    "stress_detections_after": 0.9756,
+    "stress_hazards_after": 0.6888,
+    "extra_stress_episodes": 6000,
+    "comparisons": {
+      "nominal_after_minus_before": {
+        "diff": -0.6410600000000001,
+        "ci95": 0.12413791742704049,
+        "low": -0.7651979174270406,
+        "high": -0.5169220825729596,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "stress_after_minus_before": {
+        "diff": 0.23951999999999996,
+        "ci95": 0.17695850729773008,
+        "low": 0.06256149270226988,
+        "high": 0.41647850729773006,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    }
+  },
+  "loop_trap": {
+    "stress_no_guard": {
+      "standard_return": 5.79228,
+      "detections": 0.9852,
+      "hazards": 0.759,
+      "coverage_pct": 67.0,
+      "api_failures": 2.1436,
+      "repeated_retries": 1.0493999999999999,
+      "hit_attempt_cap_pct": 1.72,
+      "stopped_by_guard_pct": 0,
+      "fallback_pct": 12.886027225737658
+    },
+    "stress_retry_guard": {
+      "standard_return": 4.9721,
+      "detections": 0.8508,
+      "hazards": 0.6366,
+      "coverage_pct": 55.279999999999994,
+      "api_failures": 1.7678,
+      "repeated_retries": 0.5716,
+      "hit_attempt_cap_pct": 0,
+      "stopped_by_guard_pct": 40.44,
+      "fallback_pct": 3.4898372508339772
+    },
+    "link_fault_no_guard": {
+      "standard_return": 2.69652,
+      "detections": 0.8082,
+      "hazards": 0.151,
+      "coverage_pct": 32.26,
+      "api_failures": 10.064400000000001,
+      "repeated_retries": 6.649,
+      "hit_attempt_cap_pct": 100,
+      "stopped_by_guard_pct": 0,
+      "fallback_pct": 56.315
+    },
+    "link_fault_retry_guard": {
+      "standard_return": 7.7574,
+      "detections": 0.911,
+      "hazards": 0.16720000000000002,
+      "coverage_pct": 38.306666666666665,
+      "api_failures": 2.1324,
+      "repeated_retries": 0.4738,
+      "hit_attempt_cap_pct": 0,
+      "stopped_by_guard_pct": 100,
+      "fallback_pct": 2.663411667842396
+    },
+    "comparisons": {
+      "stress_guard_minus_no_guard_return": {
+        "diff": -0.8201800000000001,
+        "ci95": 0.18277907449248387,
+        "low": -1.002959074492484,
+        "high": -0.6374009255075163,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "stress_guard_minus_no_guard_rejections": {
+        "diff": -0.3758,
+        "ci95": 0.039702913513177715,
+        "low": -0.41550291351317775,
+        "high": -0.3360970864868223,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "stress_guard_minus_no_guard_survivors": {
+        "diff": -0.1344,
+        "ci95": 0.01742873426282035,
+        "low": -0.15182873426282034,
+        "high": -0.11697126573717964,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "link_fault_guard_minus_no_guard_return": {
+        "diff": 5.06088,
+        "ci95": 0.13577231606594084,
+        "low": 4.925107683934059,
+        "high": 5.196652316065941,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "link_fault_guard_minus_no_guard_rejections": {
+        "diff": -7.932,
+        "ci95": 0.016153997972669233,
+        "low": -7.948153997972669,
+        "high": -7.915846002027331,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      },
+      "link_fault_guard_minus_no_guard_survivors": {
+        "diff": 0.10279999999999999,
+        "ci95": 0.01290493263386404,
+        "low": 0.08989506736613595,
+        "high": 0.11570493263386403,
+        "significant": true,
+        "missions": 500,
+        "seeds_a": 10,
+        "seeds_b": 10
+      }
+    },
+    "retry_limit": 2
+  },
+  "elapsed_seconds": 83.1
+}

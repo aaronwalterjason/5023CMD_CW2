@@ -1,0 +1,158 @@
+{
+  "training_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "representative_seed": 11,
+  "episodes": 12000,
+  "alpha_candidates": [
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "gamma": 0.95,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "decay_fraction": 0.8,
+  "validation_seed_start": 10000,
+  "validation_episodes": 200,
+  "test_seed_start": 20000,
+  "test_episodes": 500,
+  "sector_names": [
+    "Sector 0",
+    "Sector 1",
+    "Sector 2",
+    "Sector 3",
+    "Sector 4",
+    "Sector 5"
+  ],
+  "sector_presence": [
+    0.15,
+    0.45,
+    0.6,
+    0.8,
+    0.35,
+    0.9
+  ],
+  "sector_hazard": [
+    0.02,
+    0.04,
+    0.08,
+    0.12,
+    0.18,
+    0.3
+  ],
+  "base_energy_cost": [
+    [
+      1,
+      1,
+      2,
+      2,
+      3,
+      2
+    ],
+    [
+      3,
+      2,
+      2,
+      1,
+      1,
+      2
+    ]
+  ],
+  "wind_extra_cost": 1,
+  "wind_min_cost": 2,
+  "usable_energy_each": 4,
+  "max_dispatch_attempts": 12,
+  "risk_mask_threshold": 0.2,
+  "filter_hazard_multiplier": 1,
+  "reward": {
+    "detection": 10,
+    "coverage": 1,
+    "energy": -0.4,
+    "hazard": -6,
+    "api_failure": -0.5
+  },
+  "nominal": {
+    "api_failure": 0.05,
+    "sensitivity": 0.85,
+    "wind_probability": 0.5,
+    "hazard_multiplier": 1
+  },
+  "stress": {
+    "api_failure": 0.35,
+    "sensitivity": 0.5,
+    "wind_probability": 0.9,
+    "hazard_multiplier": 2
+  },
+  "link_fault": {
+    "api_failure": 0.05,
+    "sensitivity": 0.85,
+    "wind_probability": 0.5,
+    "hazard_multiplier": 1,
+    "broken_drone": 1
+  },
+  "approval": {
+    "hazard_flag": 0.1,
+    "min_visits": 30,
+    "rejections_flag": 2
+  },
+  "retry_limit": 2,
+  "edge_cases": {
+    "base_condition": "nominal",
+    "ack_loss": 0.15,
+    "false_positive": 0.1,
+    "confirm_threshold": 0.9,
+    "closure_attempt": 2
+  },
+  "stress_test": {
+    "scenarios": 400,
+    "missions_per_scenario": 25,
+    "seed": 2026,
+    "corrupt_prob": 0.03
+  },
+  "extensions": {
+    "mixed_training": {
+      "nominal": 0.7,
+      "stress": 0.3
+    }
+  },
+  "sweep": {
+    "gamma": [
+      0.9,
+      0.95,
+      0.99
+    ],
+    "episodes": [
+      3000,
+      6000,
+      12000
+    ],
+    "hazard_penalty": [
+      -6,
+      -10
+    ]
+  },
+  "robustness": {
+    "shifted_presence": [
+      0.9,
+      0.35,
+      0.8,
+      0.6,
+      0.45,
+      0.15
+    ],
+    "forgetting_episodes": 6000,
+    "forgetting_seed_offset": 500000
+  }
+}

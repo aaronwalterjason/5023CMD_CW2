@@ -1,0 +1,203 @@
+========================================================================
+Drone dispatcher - full run (official)
+Date: 2026-11-13T22:42:12   Python 3.12.5 on Windows
+Config fingerprint: 673d21f8f922   episodes=12000 alphas=[0.02, 0.05, 0.1, 0.2, 0.3] gamma=0.95 seeds=[11, 22, 33, 44, 55, 66, 77, 88, 99, 110]
+========================================================================
+
+[1/8] Main experiment (train, choose learning rate, test)
+Step 1/3  Training and validation
+  alpha=0.02  seed=11  validation return= 18.168  states=536
+  alpha=0.02  seed=22  validation return= 17.439  states=563
+  alpha=0.02  seed=33  validation return= 17.238  states=552
+  alpha=0.02  seed=44  validation return= 18.081  states=563
+  alpha=0.02  seed=55  validation return= 17.262  states=556
+  alpha=0.02  seed=66  validation return= 17.841  states=558
+  alpha=0.02  seed=77  validation return= 17.314  states=545
+  alpha=0.02  seed=88  validation return= 17.984  states=546
+  alpha=0.02  seed=99  validation return= 17.660  states=551
+  alpha=0.02  seed=110  validation return= 17.915  states=533
+  alpha=0.05  seed=11  validation return= 18.065  states=543
+  alpha=0.05  seed=22  validation return= 17.317  states=566
+  alpha=0.05  seed=33  validation return= 17.880  states=578
+  alpha=0.05  seed=44  validation return= 18.265  states=565
+  alpha=0.05  seed=55  validation return= 18.118  states=553
+  alpha=0.05  seed=66  validation return= 18.194  states=553
+  alpha=0.05  seed=77  validation return= 17.119  states=551
+  alpha=0.05  seed=88  validation return= 17.659  states=547
+  alpha=0.05  seed=99  validation return= 18.080  states=551
+  alpha=0.05  seed=110  validation return= 17.914  states=556
+  alpha=0.1   seed=11  validation return= 16.936  states=577
+  alpha=0.1   seed=22  validation return= 17.572  states=556
+  alpha=0.1   seed=33  validation return= 17.971  states=557
+  alpha=0.1   seed=44  validation return= 17.695  states=574
+  alpha=0.1   seed=55  validation return= 18.115  states=573
+  alpha=0.1   seed=66  validation return= 17.590  states=560
+  alpha=0.1   seed=77  validation return= 17.721  states=561
+  alpha=0.1   seed=88  validation return= 18.282  states=578
+  alpha=0.1   seed=99  validation return= 17.215  states=571
+  alpha=0.1   seed=110  validation return= 16.787  states=564
+  alpha=0.2   seed=11  validation return= 16.345  states=560
+  alpha=0.2   seed=22  validation return= 17.956  states=559
+  alpha=0.2   seed=33  validation return= 18.181  states=571
+  alpha=0.2   seed=44  validation return= 15.907  states=555
+  alpha=0.2   seed=55  validation return= 17.878  states=564
+  alpha=0.2   seed=66  validation return= 16.966  states=551
+  alpha=0.2   seed=77  validation return= 17.724  states=564
+  alpha=0.2   seed=88  validation return= 17.192  states=554
+  alpha=0.2   seed=99  validation return= 17.726  states=564
+  alpha=0.2   seed=110  validation return= 17.166  states=556
+  alpha=0.3   seed=11  validation return= 13.925  states=570
+  alpha=0.3   seed=22  validation return= 18.287  states=557
+  alpha=0.3   seed=33  validation return= 16.767  states=580
+  alpha=0.3   seed=44  validation return= 17.915  states=581
+  alpha=0.3   seed=55  validation return= 18.285  states=557
+  alpha=0.3   seed=66  validation return= 17.483  states=574
+  alpha=0.3   seed=77  validation return= 15.392  states=560
+  alpha=0.3   seed=88  validation return= 17.070  states=557
+  alpha=0.3   seed=99  validation return= 17.697  states=578
+  alpha=0.3   seed=110  validation return= 15.781  states=553
+  alpha=0.02  mean validation return  17.690 +/- 0.254 across 10 seeds (range 17.24-18.17)
+  alpha=0.05  mean validation return  17.861 +/- 0.274 across 10 seeds (range 17.12-18.26)
+  alpha=0.1   mean validation return  17.589 +/- 0.349 across 10 seeds (range 16.79-18.28)
+  alpha=0.2   mean validation return  17.304 +/- 0.528 across 10 seeds (range 15.91-18.18)
+  alpha=0.3   mean validation return  16.860 +/- 1.019 across 10 seeds (range 13.92-18.29)
+  -> selected alpha = 0.05 (highest mean validation return)
+Step 2/3  Testing on unseen missions
+  nominal learned     return  17.228 +/- 0.920   | across 10 runs 17.224 +/- 0.200
+  nominal greedy      return  16.212 +/- 0.890
+  nominal random      return  14.038 +/- 0.897
+  nominal unshielded  return  21.723 +/- 1.018   | across 10 runs 21.415 +/- 0.291
+  stress  learned     return   5.751 +/- 0.825   | across 10 runs 5.792 +/- 0.146
+  stress  greedy      return   5.439 +/- 0.774
+  stress  random      return   3.751 +/- 0.781
+  stress  unshielded  return   6.017 +/- 0.888   | across 10 runs 5.789 +/- 0.218
+Step 3/3  Saving evidence
+  learned - greedy (nominal): 1.017  95% CI [0.599, 1.434]   | across 10 training runs 1.013 [0.813, 1.212]
+      all-runs average, mission-level CI: 1.013 [0.636, 1.389]
+  learned - greedy (stress): 0.313  95% CI [-0.171, 0.797]   | across 10 training runs 0.354 [0.208, 0.500]
+      all-runs average, mission-level CI: 0.354 [-0.060, 0.768]
+  done in 82.4 s -> C:\Users\Aaron Walter Jason\OneDrive\Documents\INTI COLLEGE\Degree\Sem1\AI\drone_report\drone_report\evidence
+
+[2/8] Correctness checks
+  PASS  risk_filter_blocks_sectors_above_limit_only_when_enabled
+  PASS  mission_ends_when_all_surveyed_no_energy_or_command_limit
+  PASS  allowed_actions_and_block_reason_apply_the_same_rules
+  PASS  weather_aware_filter_blocks_sectors_whose_scaled_hazard_exceeds_limit
+  PASS  rejected_command_uses_no_energy_and_surveys_nothing
+  PASS  1000_random_stress_missions_never_break_energy_or_coverage_rules
+  PASS  same_seed_gives_identical_mission
+  PASS  q_update_matches_worked_example
+  PASS  training_is_reproducible
+  PASS  config_values_drive_the_code
+  PASS  mixed_condition_training_is_reproducible_and_differs_from_nominal
+  PASS  paired_ci_gives_zero_difference_for_identical_runs
+  PASS  link_fault_rejects_every_command_to_broken_drone
+  PASS  retry_guard_prevents_command_limit_loops_with_broken_link
+  PASS  explanation_lists_risky_sectors_as_blocked
+  PASS  approval_gate_flags_high_hazard_moves
+  PASS  no_gate_mode_reproduces_the_learned_policy
+  PASS  human_refusals_lead_to_next_best_move_or_abstain
+  PASS  human_can_stop_the_mission
+  PASS  refusal_reasons_are_recorded_as_structured_categories
+  PASS  explanations_open_with_a_one_line_summary_and_field_report
+  PASS  feedback_review_suggests_changes_but_never_applies_them
+  PASS  lost_acknowledgements_never_cause_duplicate_flights_when_handled
+  PASS  closed_sectors_are_never_dispatched_to_when_handled
+  PASS  bayesian_confirmation_reduces_false_survivor_reports
+  PASS  invalid_states_are_always_held_and_valid_states_accepted
+  PASS  randomised_stress_scenarios_break_no_safety_rule
+  PASS  stress_test_detects_a_deliberately_broken_dispatcher
+  PASS  exact_calculation_matches_4000_simulated_missions
+  PASS  optimal_policy_is_at_least_as_good_as_greedy_and_learned
+
+[3/8] Explanations, supervisor (over-trust) study and feedback review
+Decision transcripts
+  wrote explanation_nominal_vigilant.txt
+  wrote explanation_stress_vigilant.txt
+  wrote explanation_stress_always_approve.txt
+Supervisor (over-trust) study
+  nominal autonomous      return  17.23  survivors 1.816  hazards 0.440  unsafe approvals 0
+  nominal always_approve  return  17.23  survivors 1.816  hazards 0.440  unsafe approvals 0
+  nominal vigilant        return  17.23  survivors 1.816  hazards 0.440  unsafe approvals 0
+  nominal always_reject   return   8.32  survivors 0.868  hazards 0.148  unsafe approvals 0
+  stress  autonomous      return   5.75  survivors 1.012  hazards 0.836  unsafe approvals 0
+  stress  always_approve  return   5.75  survivors 1.012  hazards 0.836  unsafe approvals 1466
+  stress  vigilant        return   3.09  survivors 0.548  hazards 0.310  unsafe approvals 0
+  stress  always_reject   return   2.20  survivors 0.404  hazards 0.248  unsafe approvals 0
+Feedback review: 15614 decisions (simulated study: 15614)
+  [PENDING HUMAN SIGN-OFF] review hazard estimate: 100% of 2038 hazard-flagged requests for sector 3 were refused under stress conditions; agent estimate 0.12, mean field report 0.24
+  [PENDING HUMAN SIGN-OFF] review hazard estimate: 100% of 1385 hazard-flagged requests for sector 4 were refused under stress conditions; agent estimate 0.18, mean field report 0.36
+  [PENDING HUMAN SIGN-OFF] review approval threshold: 100% of 1008 "hazard" requests were approved under nominal conditions with no unsafe approvals
+  [PENDING HUMAN SIGN-OFF] review approval threshold: 100% of 45 "unfamiliar" requests were approved under nominal conditions with no unsafe approvals
+  [PENDING HUMAN SIGN-OFF] automation-bias warning: 1466 requests were approved although the current hazard exceeded the safety limit
+
+[4/8] Hyperparameter sweep and overfitting tests
+1/4  Hyperparameter sweep (validation missions only)
+  gamma          0.9     validation return  18.04  survivors 1.893  hazards 0.455
+  gamma          0.95    validation return  17.86  survivors 1.875  hazards 0.438
+  gamma          0.99    validation return  17.88  survivors 1.881  hazards 0.443
+  episodes       3000    validation return  17.63  survivors 1.857  hazards 0.426
+  episodes       6000    validation return  17.71  survivors 1.850  hazards 0.419
+  episodes       12000   validation return  17.86  survivors 1.875  hazards 0.438
+  hazard_penalty -6      validation return  17.86  survivors 1.875  hazards 0.438
+  hazard_penalty -10     validation return  17.73  survivors 1.855  hazards 0.420
+2/4  Shifted-map test (overfitting)
+  learned_original_map   return  21.34  survivors 2.206
+  greedy_updated_map     return  21.94  survivors 2.212
+  learned_retrained      return  23.10  survivors 2.361
+3/4  Forgetting test (continue training on stress missions only)
+  nominal return 17.22 -> 16.58, stress return 5.79 -> 6.03, best move changed in 11.7% of situations
+4/4  Loop-trap test (random rejections vs a broken drone link, with and without retry guard)
+  stress     no_guard     rejected commands 2.14  identical re-sends 1.05  hit command limit   1.7%  stopped by guard   0.0%  survivors 0.985  return 5.79
+  stress     retry_guard  rejected commands 1.77  identical re-sends 0.57  hit command limit   0.0%  stopped by guard  40.4%  survivors 0.851  return 4.97
+  link_fault no_guard     rejected commands 10.06  identical re-sends 6.65  hit command limit 100.0%  stopped by guard   0.0%  survivors 0.808  return 2.70
+  link_fault retry_guard  rejected commands 2.13  identical re-sends 0.47  hit command limit   0.0%  stopped by guard 100.0%  survivors 0.911  return 7.76
+  done in 83.1 s
+
+[5/8] Best-possible benchmark and side experiments
+1/3  Optimal benchmark (exact dynamic programming)
+  nominal  optimal  18.74 | learned  18.34 (97.9% of optimal) | greedy  17.41 (92.9%) | random  14.92
+  stress   optimal   7.43 | learned   6.46 (87.0% of optimal) | greedy   5.94 (80.0%) | random   4.61
+2/3  Mixed-condition training {'nominal': 0.7, 'stress': 0.3}
+  tested nominal  baseline  17.22  mixed  17.15  difference -0.08 [-0.13, -0.03]  fallback 0.0% -> 0.0%
+  tested stress   baseline   5.79  mixed   5.93  difference +0.14 [-0.01, +0.29]  fallback 12.9% -> 0.4%
+3/3  Weather-aware risk filter (stress missions)
+  blocks sectors [3, 4, 5] under stress | hazards 0.759 -> 0.310 (-0.449 [-0.498, -0.400]) | survivors 0.985 -> 0.548
+  done in 22.2 s
+
+[6/8] Edge cases (lost acknowledgements, false detections, closures, invalid input)
+Edge-case study (500 test missions, nominal conditions, ack loss 15%, false detections 10%)
+  naive    duplicates/mission 0.372  battery overruns 0.848  closure violations 0.710  false confirmations 0.178  return 15.42
+  handled  duplicates/mission 0.000  battery overruns 0.000  closure violations 0.000  false confirmations 0.058  return 15.56
+  input validation: 5005/5005 malformed states held; all valid states accepted: True
+  done in 0.4 s
+
+[7/8] Randomised stress test of the safety rules
+Randomised stress test: 400 scenarios x 25 missions x 4 modes
+  I1 PASS   70,378 checks  dispatched move is allowed (unsurveyed, affordable, passes risk filter)
+  I2 PASS   70,378 checks  no dispatch into a closed sector
+  I3 PASS   70,378 checks  battery never negative, no repeat survey, command count within limit
+  I4 PASS    2,452 checks  corrupted state never acted on
+  I5 PASS   40,000 checks  mission ends within the command limit; no crash
+  I6 PASS   10,000 checks  lost acknowledgements handled: no duplicate flights or battery overruns
+  I7 PASS   20,000 checks  vigilant supervisor never approves unsafe; always-refuse never approves
+  283,586 checks over 40,000 missions: 0 violations (10.2 s)
+
+[8/8] Figures
+  wrote figures\fig1_learning_curve.png
+  wrote figures\fig2_learning_rate_selection.png
+  wrote figures\fig3_policy_comparison.png
+  wrote figures\fig4_safety_tradeoff.png
+  wrote figures\fig5_hyperparameter_sweep.png
+  wrote figures\fig6_overfitting_tests.png
+  wrote figures\fig7_supervisor_study.png
+  wrote figures\fig8_q_values_first_decision.png
+  wrote figures\fig9_optimal_benchmark.png
+  wrote figures\fig10_side_experiments.png
+  wrote figures\fig11_paired_differences.png
+  wrote figures\fig12_edge_cases.png
+  wrote figures\fig13_decision_explanation.png
+
+========================================================================
+Finished in 210 s. Checks: ALL PASSED
+Outputs: C:\Users\Aaron Walter Jason\OneDrive\Documents\INTI COLLEGE\Degree\Sem1\AI\drone_report\drone_report\evidence  |  C:\Users\Aaron Walter Jason\OneDrive\Documents\INTI COLLEGE\Degree\Sem1\AI\drone_report\drone_report\figures

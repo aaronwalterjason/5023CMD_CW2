@@ -1,0 +1,186 @@
+{
+  "records": 15614,
+  "sources": {
+    "simulated study": 15614
+  },
+  "summary": {
+    "always_approve_nominal": {
+      "supervisor": "always_approve",
+      "condition": "nominal",
+      "requests": 1023,
+      "approval_rate": 1.0,
+      "approval_rate_by_flag_type": {
+        "hazard": {
+          "requests": 1008,
+          "approval_rate": 1.0
+        },
+        "unfamiliar": {
+          "requests": 45,
+          "approval_rate": 1.0
+        }
+      },
+      "refusal_reasons": {},
+      "most_refused_sectors": {},
+      "unsafe_approvals": 0
+    },
+    "always_approve_stress": {
+      "supervisor": "always_approve",
+      "condition": "stress",
+      "requests": 2016,
+      "approval_rate": 1.0,
+      "approval_rate_by_flag_type": {
+        "hazard": {
+          "requests": 1466,
+          "approval_rate": 1.0
+        },
+        "unfamiliar": {
+          "requests": 2075,
+          "approval_rate": 1.0
+        }
+      },
+      "refusal_reasons": {},
+      "most_refused_sectors": {},
+      "unsafe_approvals": 1466
+    },
+    "always_reject_nominal": {
+      "supervisor": "always_reject",
+      "condition": "nominal",
+      "requests": 3666,
+      "approval_rate": 0.0,
+      "approval_rate_by_flag_type": {
+        "hazard": {
+          "requests": 3590,
+          "approval_rate": 0.0
+        },
+        "unfamiliar": {
+          "requests": 961,
+          "approval_rate": 0.0
+        }
+      },
+      "refusal_reasons": {
+        "blanket_refusal": 3666
+      },
+      "most_refused_sectors": {
+        "3": 2319,
+        "4": 1271,
+        "0": 74
+      },
+      "unsafe_approvals": 0
+    },
+    "always_reject_stress": {
+      "supervisor": "always_reject",
+      "condition": "stress",
+      "requests": 3629,
+      "approval_rate": 0.0,
+      "approval_rate_by_flag_type": {
+        "hazard": {
+          "requests": 2819,
+          "approval_rate": 0.0
+        },
+        "unfamiliar": {
+          "requests": 2893,
+          "approval_rate": 0.0
+        }
+      },
+      "refusal_reasons": {
+        "blanket_refusal": 3629
+      },
+      "most_refused_sectors": {
+        "3": 1664,
+        "4": 1155,
+        "0": 466
+      },
+      "unsafe_approvals": 0
+    },
+    "vigilant_nominal": {
+      "supervisor": "vigilant",
+      "condition": "nominal",
+      "requests": 1023,
+      "approval_rate": 1.0,
+      "approval_rate_by_flag_type": {
+        "hazard": {
+          "requests": 1008,
+          "approval_rate": 1.0
+        },
+        "unfamiliar": {
+          "requests": 45,
+          "approval_rate": 1.0
+        }
+      },
+      "refusal_reasons": {},
+      "most_refused_sectors": {},
+      "unsafe_approvals": 0
+    },
+    "vigilant_stress": {
+      "supervisor": "vigilant",
+      "condition": "stress",
+      "requests": 4257,
+      "approval_rate": 0.1959126145172657,
+      "approval_rate_by_flag_type": {
+        "hazard": {
+          "requests": 3423,
+          "approval_rate": 0.0
+        },
+        "unfamiliar": {
+          "requests": 4185,
+          "approval_rate": 0.3436081242532855
+        }
+      },
+      "refusal_reasons": {
+        "hazard_concern": 3423
+      },
+      "most_refused_sectors": {
+        "3": 2038,
+        "4": 1385
+      },
+      "unsafe_approvals": 0
+    }
+  },
+  "suggestions": [
+    {
+      "type": "review hazard estimate",
+      "condition": "stress",
+      "sector": 3,
+      "evidence": "100% of 2038 hazard-flagged requests for sector 3 were refused under stress conditions; agent estimate 0.12, mean field report 0.24",
+      "possible_action": "raise the hazard estimate for sector 3 in stress conditions, or adopt a weather-aware risk filter",
+      "status": "PENDING HUMAN SIGN-OFF",
+      "applied": false
+    },
+    {
+      "type": "review hazard estimate",
+      "condition": "stress",
+      "sector": 4,
+      "evidence": "100% of 1385 hazard-flagged requests for sector 4 were refused under stress conditions; agent estimate 0.18, mean field report 0.36",
+      "possible_action": "raise the hazard estimate for sector 4 in stress conditions, or adopt a weather-aware risk filter",
+      "status": "PENDING HUMAN SIGN-OFF",
+      "applied": false
+    },
+    {
+      "type": "review approval threshold",
+      "condition": "nominal",
+      "flag_type": "hazard",
+      "evidence": "100% of 1008 \"hazard\" requests were approved under nominal conditions with no unsafe approvals",
+      "possible_action": "consider whether \"hazard\" requests in nominal conditions need approval, weighing supervisor workload against safety",
+      "status": "PENDING HUMAN SIGN-OFF",
+      "applied": false
+    },
+    {
+      "type": "review approval threshold",
+      "condition": "nominal",
+      "flag_type": "unfamiliar",
+      "evidence": "100% of 45 \"unfamiliar\" requests were approved under nominal conditions with no unsafe approvals",
+      "possible_action": "consider whether \"unfamiliar\" requests in nominal conditions need approval, weighing supervisor workload against safety",
+      "status": "PENDING HUMAN SIGN-OFF",
+      "applied": false
+    },
+    {
+      "type": "automation-bias warning",
+      "supervisor": "always_approve (stress)",
+      "evidence": "1466 requests were approved although the current hazard exceeded the safety limit",
+      "possible_action": "review supervisor training and make the field report more prominent",
+      "status": "PENDING HUMAN SIGN-OFF",
+      "applied": false
+    }
+  ],
+  "note": "Suggestions are never applied automatically."
+}

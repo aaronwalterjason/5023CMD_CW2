@@ -1,0 +1,61 @@
+{
+  "settings": {
+    "scenarios": 400,
+    "missions_per_scenario": 25,
+    "seed": 2026,
+    "corrupt_prob": 0.03
+  },
+  "scenarios": 400,
+  "missions_per_mode": 10000,
+  "missions_total": 40000,
+  "checks_by_invariant": {
+    "I1": 70378,
+    "I2": 70378,
+    "I3": 70378,
+    "I4": 2452,
+    "I5": 40000,
+    "I6": 10000,
+    "I7": 20000
+  },
+  "checks_total": 283586,
+  "invariants": {
+    "I1": "dispatched move is allowed (unsurveyed, affordable, passes risk filter)",
+    "I2": "no dispatch into a closed sector",
+    "I3": "battery never negative, no repeat survey, command count within limit",
+    "I4": "corrupted state never acted on",
+    "I5": "mission ends within the command limit; no crash",
+    "I6": "lost acknowledgements handled: no duplicate flights or battery overruns",
+    "I7": "vigilant supervisor never approves unsafe; always-refuse never approves"
+  },
+  "violations_total": 0,
+  "violations": [],
+  "ranges_tested": {
+    "api_failure": [
+      0,
+      0.6
+    ],
+    "sensitivity": [
+      0.3,
+      0.95
+    ],
+    "wind_probability": [
+      0,
+      1
+    ],
+    "hazard_multiplier": [
+      0.5,
+      3.0
+    ],
+    "broken_drone_share": 0.2,
+    "ack_loss": [
+      0,
+      0.4
+    ],
+    "false_positive": [
+      0,
+      0.3
+    ],
+    "corrupt_prob_per_step": 0.03
+  },
+  "elapsed_seconds": 10.2
+}

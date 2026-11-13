@@ -1,0 +1,77 @@
+{
+  "training_seeds": [
+    11,
+    22,
+    33
+  ],
+  "episodes": 12000,
+  "alpha_candidates": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "gamma": 0.95,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "decay_fraction": 0.8,
+  "validation_seed_start": 10000,
+  "test_seed_start": 20000,
+  "validation_episodes": 200,
+  "test_episodes": 500,
+  "sector_presence": [
+    0.15,
+    0.45,
+    0.6,
+    0.8,
+    0.35,
+    0.9
+  ],
+  "sector_hazard": [
+    0.02,
+    0.04,
+    0.08,
+    0.12,
+    0.18,
+    0.3
+  ],
+  "base_energy_cost": [
+    [
+      1,
+      1,
+      2,
+      2,
+      3,
+      2
+    ],
+    [ 
+      3,
+      2,
+      2,
+      1,
+      1,
+      2
+    ]
+  ],
+  "usable_energy_each": 4,
+  "max_dispatch_attempts": 12,
+  "risk_mask_threshold": 0.2,
+  "reward": {
+    "detection": 10,
+    "coverage": 1,
+    "energy": -0.4,
+    "hazard": -6,
+    "api_failure": -0.5
+  },
+  "nominal": {
+    "api_failure": 0.05,
+    "sensitivity": 0.85,
+    "wind_probability": 0.5,
+    "hazard_multiplier": 1
+  },
+  "stress": {
+    "api_failure": 0.35,
+    "sensitivity": 0.5,
+    "wind_probability": 0.9,
+    "hazard_multiplier": 2
+  }
+}

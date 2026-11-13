@@ -1,0 +1,7 @@
+{
+  "risk_filter_excludes_sector_5_only_when_enabled": "PASS",
+  "terminal_conditions": "PASS",
+  "rejected_request_does_not_consume_energy_or_mark_coverage": "PASS",
+  "1000_stress_missions_preserve_energy_and_unique_coverage": "PASS",
+  "scenario_seed_reproducibility": "PASS"
+}

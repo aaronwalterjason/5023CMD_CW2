@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Not part of the submission
+_unused/
+quick_demo/
+report_pack/
+
+# Word documents and Office lock files
+*.docx
+~$*

@@ -1,0 +1,123 @@
+[
+  {
+    "seed": 20000,
+    "state_before": [
+      0,
+      4,
+      4,
+      1,
+      0
+    ],
+    "allowed_actions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "action": 2,
+    "drone": 0,
+    "sector": 2,
+    "q_value": 16.42543687037513,
+    "event": "survey_complete",
+    "reward": -0.20000000000000018,
+    "state_after": [
+      4,
+      1,
+      4,
+      1,
+      1
+    ]
+  },
+  {
+    "seed": 20000,
+    "state_before": [
+      4,
+      1,
+      4,
+      1,
+      1
+    ],
+    "allowed_actions": [
+      0,
+      1,
+      6,
+      7,
+      9,
+      10
+    ],
+    "action": 9,
+    "drone": 1,
+    "sector": 3,
+    "q_value": 12.493004181436731,
+    "event": "survey_complete",
+    "reward": 10.6,
+    "state_after": [
+      12,
+      1,
+      3,
+      1,
+      2
+    ]
+  },
+  {
+    "seed": 20000,
+    "state_before": [
+      12,
+      1,
+      3,
+      1,
+      2
+    ],
+    "allowed_actions": [
+      0,
+      1,
+      7,
+      10
+    ],
+    "action": 1,
+    "drone": 0,
+    "sector": 1,
+    "q_value": 5.993477837797116,
+    "event": "survey_complete",
+    "reward": 0.6,
+    "state_after": [
+      14,
+      0,
+      3,
+      1,
+      3
+    ]
+  },
+  {
+    "seed": 20000,
+    "state_before": [
+      14,
+      0,
+      3,
+      1,
+      3
+    ],
+    "allowed_actions": [
+      10
+    ],
+    "action": 10,
+    "drone": 1,
+    "sector": 4,
+    "q_value": 2.446298055982831,
+    "event": "survey_complete",
+    "reward": 0.6,
+    "state_after": [
+      30,
+      0,
+      2,
+      1,
+      4
+    ]
+  }
+]

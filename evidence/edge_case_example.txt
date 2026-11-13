@@ -1,0 +1,24 @@
+Edge-case example - same mission, naive vs handled dispatcher
+
+--- naive ---
+A->2: acknowledgement lost -> assumed failed
+B->3: acknowledgement lost -> assumed failed
+Supervisor closes sector 3 (responders entering).
+B->4: rejected before execution
+B->3: DUPLICATE flight - sector already surveyed
+B->3: survey completed
+A->1: acknowledgement lost -> assumed failed
+A->1: drone A lacks battery - aborted on board
+A->1: drone A lacks battery - aborted on board
+A->1: drone A lacks battery - aborted on board
+A->1: drone A lacks battery - aborted on board
+A->1: drone A lacks battery - aborted on board
+A->1: drone A lacks battery - aborted on board
+A->1: drone A lacks battery - aborted on board
+
+--- handled ---
+A->2: acknowledgement lost -> PENDING -> telemetry confirms survey
+Supervisor closes sector 3 (responders entering).
+B->4: rejected before execution
+B->4: survey completed
+A->1: acknowledgement lost -> PENDING -> telemetry confirms survey
